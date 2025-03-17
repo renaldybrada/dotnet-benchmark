@@ -1,0 +1,52 @@
+# Ignore Visual Studio specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore user secrets (for security reasons)
+secrets.json
+AppSecrets.json
+
+# Ignore dependencies
+packages/
+!packages/repositories.config
+
+# Ignore logs and reports
+logs/
+*.log
+TestResults/
+
+# Ignore publish output
+publish/
+
+# Ignore .NET configuration files
+appsettings.Development.json
+appsettings.Local.json
+
+# Ignore Docker files
+.dockerignore
+**/[Dd]ockerfile
+
+# Ignore database files
+*.mdf
+*.ldf
+*.db
+
+# Ignore environment variables
+.env
+
+# Ignore Rider and JetBrains specific files
+.idea/
+*.iml
+
+# Ignore temporary files
+*.tmp
+*.bak
+~*
