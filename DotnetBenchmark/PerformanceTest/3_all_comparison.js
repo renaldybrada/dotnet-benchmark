@@ -5,8 +5,10 @@ import http from 'k6/http';
 import { check, group, sleep } from 'k6';
 import { Trend } from 'k6/metrics';
 
-const baseUrl = 'https://localhost:7154/api';
-const resource = __ENV.resource ? __ENV.resource : 'Product'
+const config = JSON.parse(open('config.json'));
+
+const baseUrl = config.BASE_URL;
+const resource = __ENV.resource ? __ENV.resource : config.DEFAULT_RESOURCE;
 
 let respTimeSync = new Trend('resp_time_sync');
 let respTimeAsync = new Trend('resp_time_async');

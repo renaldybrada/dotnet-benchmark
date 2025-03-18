@@ -1,0 +1,5 @@
+{
+    "BASE_URL": "http://localhost:5077/api", /* make sure this base url ended with /api */
+    "DEFAULT_RESOURCE": "Product",
+    "DEFAULT_METHOD": "sync"
+}

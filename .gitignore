@@ -50,3 +50,6 @@ appsettings.Local.json
 *.tmp
 *.bak
 ~*
+
+# Ignore Config K6
+DotnetBenchmark/PerformanceTest/config.json

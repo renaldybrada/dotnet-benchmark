@@ -6,9 +6,11 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 
-const baseUrl = 'https://localhost:7154/api';
-const resource = __ENV.resource ? __ENV.resource : 'Product'
-const method = __ENV.method ? __ENV.method : 'sync';
+const config = JSON.parse(open('config.json'));
+
+const baseUrl = config.BASE_URL;
+const resource = __ENV.resource ? __ENV.resource : config.DEFAULT_RESOURCE
+const method = __ENV.method ? __ENV.method : config.DEFAULT_METHOD;
 const endpoint = `/${resource}/${method}`;  
 
 export const options = {
